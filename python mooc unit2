@@ -1,0 +1,24 @@
+#turtle.goto(100,100):去往100，100的点，绘制
+#turtle.fd():向海龟正前方运行
+#turtle.bk():向海龟反前方运行
+#turtle.circle():海龟左侧某点为圆心，曲线运行
+#turtle.seth(angle)：绝对角度坐标体系
+#turtle.left/right(angle)：海龟坐标旋转
+import turtle
+#使用turtle库。之后调用采用库名.函数的形式
+#可使用from 库名 import *的形式
+#可使用import 库名 as 函数名的形式
+turtle.setup(1000,350,300,300) #定义窗口大小，及在屏幕中间是位置
+turtle.penup() #抬起“画笔”不留下轨迹
+turtle.fd(-250) #走直线
+turtle.pendown() #放下“画笔”留下轨迹
+turtle.pensize(25)
+turtle.pencolor('purple')#修改画笔颜色
+turtle.seth(-40) #改变行进方向
+for i in range(5): #循环4次
+    turtle.circle(40,80)
+    turtle.circle(-40,120)
+turtle.circle(40,80/2)
+turtle.fd(40)
+turtle.circle(40*2/3) #绘制曲线 （r,extent=None）半径，走过的角度
+turtle.done()
